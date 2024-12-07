@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="hero-section">
+    <div class="hero-text">
+        <div class="title-shloka">
+            ॥ सर्वमंगल मांगल्ये शिवे सर्वार्थसाधिके शरण्ये त्रयम्बके गौरी नारायणी नमोस्तुते ॥
+            <button popovertarget="meaning-popover" id="popover-btn">
+                ℹ️
+            </button>
+            <div popover id="meaning-popover">
+                (Salutations to You, O Jagadamba) O the Auspiciousness in all the Auspicious, Auspiciousness Herself and fulfiller of
+                all the Objectives of the Devotees (Purusharthas - Dharma, Artha, Kama and Moksha) ...O the giver of Refuge, with Three
+                Eyes (spanning the Past, Present and Future; and containing within them the Sun, Moon and the Fire), the Gauri (Shining
+                One); Salutations to You O Narayani.
+            </div>
+        </div>
+        
+        <div class="title-text">
+            "Devi Saptashati - A Collection of 700 Verses Praising Devi Durga's Power, Protection, and Grace."
+        </div>
+    </div>
+</div>
+
+<div class="details">
+    <div>
+        <div class="details-title">
+            What's Devi Saptashati (a.k.a Chandi Path) ?
+        </div>
+        <div class="body-text">
+            <b>Devi Saptashati</b>, also known as the Durga Saptashati or Chandi Path, is a highly revered Hindu scripture,
+            consisting of
+            700 verses (Sapta (<hindi>सप्त्</hindi>) meaning 7 and Shata (<hindi>शत्</hindi>) meaning 100, hence the name
+            "Saptashati"). It forms a crucial part of
+            the Markandeya Purana and is dedicated to the
+            worship of Goddess Durga in her various forms. The text narrates the story of the cosmic struggle between the divine
+            and
+            demonic forces, symbolizing the triumph of good over evil, and is a spiritual guide for invoking the grace and
+            blessings
+            of the Divine Mother.
+        </div>
+    </div>
+    <div>
+        <div class="details-title">
+            Recitation and Worship
+        </div>
+        <div class="body-text">
+            <p>
+                The Durga Saptashati is often recited during Navaratri, especially in its Chandi Path (<hindi>चण्डी पाठः</hindi>)
+                form. The devotees believe that
+                chanting these verses with faith and dedication invokes the protective and nurturing aspects of the Divine Mother.
+                The
+                reading of the entire 700 verses, however, is a profound spiritual discipline and is often performed as part of a
+                larger
+                worship ritual.
+            </p>
+            <p>
+                To start learning about Devi Saptashati and its know-how's, navigate through the buttons below.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section-icon-container">
+    <div class="section">
+        <a href="{{ url_for('getting_started') }}" class="section-icon">
+            <!-- <img src="{{ url_for('static', filename='images/icons/how.png') }}" alt="" srcset=""> -->
+            <img alt="Start GIF" src="{{ url_for('static', filename='images/gifs/start.gif') }}" />
+            <span>1. Getting Started</span>
+        </a>
+        <a href="{{ url_for('initial_purify_verses') }}" class="section-icon">
+            <!-- <img src="{{ url_for('static', filename='images/icons/fire.png') }}" alt="" srcset=""> -->
+            <img alt="Fire GIF" src="{{ url_for('static', filename='images/gifs/fire.gif') }}" />
+            <span>2. Initiation & Purification Verses</span>
+        </a>
+        <a href="{{ url_for('saptashati_verses') }}" class="section-icon">
+            <!-- <img src="{{ url_for('static', filename='images/icons/scripture.png') }}" alt="" srcset=""> -->
+            <img alt="Scroll GIF" src="{{ url_for('static', filename='images/gifs/scroll.gif') }}" />
+            <span>3. Reading 13 Chapters</span>
+        </a>
+        <a href="{{ url_for('concluding_verses') }}" class="section-icon">
+            <!-- <img src="{{ url_for('static', filename='images/icons/namaste.png') }}" alt="" srcset=""> -->
+            <img alt="Namaste GIF" src="{{ url_for('static', filename='images/gifs/namaste.gif') }}" />
+            <span>4. Conclusion and Apology Verses</span>
+        </a>        
+    </div>
+    <div class="section">
+        <a href="{{ url_for('purpose') }}">
+            <!-- <img src="{{ url_for('static', filename='images/icons/target.png') }}" alt="" srcset=""> -->
+            <img alt="Namaste GIF" src="{{ url_for('static', filename='images/gifs/goals.gif') }}" />
+            <span>About this Website</span>
+        </a>
+        <a href="{{ url_for('other_verses') }}" class="section-icon">
+            <!-- <img src="{{ url_for('static', filename='images/icons/verse.png') }}" alt="" srcset=""> -->
+            <img alt="Namaste GIF" src="{{ url_for('static', filename='images/gifs/feather-pen.gif') }}" />
+            <span>Other Stotras / Shlokas / Mantras</span>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block title %}Purpose{% endblock %}
+
+{% block content %}
+
+<div class="nav-pages-buttons">
+    <a href="{{ url_for('index') }}" title="Home">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+                d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+                clip-rule="evenodd" />
+        </svg>
+
+    </a>
+    <div class="gs-title">About this Website</div>
+    <div></div>
+</div>
+
+<div class="content-container">
+    <div class="about-container">
+        <div class="about-container-title">
+            Get to know me !
+        </div>
+        <div class="about-container-body">
+            <div>
+                <p>
+                    Hi 👋, I'm Deepraj Adhikary, the creator of this website.
+                </p>
+                <p>
+                    I come from a Hindu-Brahmin family where priesthood has been a long-standing tradition. I had my Upanayana Samskara 
+                    (<hindi>उपनयन संस्कार</hindi>) at the age of 13, marking my initiation into the fascinating world of Sanskrit—a passion that has stayed
+                    with me ever since. Sanskrit, unfortunately, is a dying language in India, and I want to play a small but meaningful
+                    role in keeping it alive in the hearts and minds of those enthusiastic about learning it.
+                </p>
+                <p>
+                    Professionally, I'm a Technical Business Analyst with the mind of a Software Developer and the meticulousness of a
+                    Quality Assurance Tester. I have been working at a multinational corporation for the past six years. Currently, I live
+                    in Toronto, Canada, but I was born in Tamluk (West Bengal, India) and grew up in Hyderabad (Telangana, India).
+                </p>
+            </div>
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="about-container">
+        <div class="about-container-title">
+            Why did I create the website ?
+        </div>
+        <div class="about-container-body">
+            <div>
+                <p>
+                    The goal of this website is to make the rich spiritual teachings and practices of the Devi Saptashati accessible to
+                    everyone. Whether you're new to this sacred text or already familiar with it, this project is here to guide you. Many
+                    people feel overwhelmed by the complexity of rituals like the Chandi Path. This website simplifies the process, offering
+                    step-by-step guidance so anyone can perform these practices with clarity and devotion.
+                </p>
+                <p>
+                    The Devi Saptashati is a treasure of our cultural and spiritual heritage. This project is my effort to keep that legacy
+                    alive and ensure that future generations can connect with it in meaningful ways. The rituals and teachings of the Devi
+                    Saptashati are not just about tradition; they offer a path to spiritual growth, inner strength, and a deeper connection
+                    with the divine power of the Goddess.
+                </p>
+                <p>
+                    This platform is designed to be a simple and reliable resource for learning the chants, stotras, and the profound
+                    meanings behind the Devi Saptashati. Whether you're reciting on your own or in a group, you'll find everything you need
+                    here. Sacred texts can often feel inaccessible due to language barriers or their inherent complexity. By providing
+                    translations, explanations, and guidance, this website ensures that everyone—regardless of their background—can benefit
+                    from these teachings.
+                </p>
+                <p>
+                    This is more than just a website; it's a space for people who share a love for Goddess Durga to come together, learn,
+                    and grow. It's about celebrating devotion as a collective experience.
+                    
+                    The Devi Saptashati is not merely a collection of rituals; it's filled with timeless wisdom about overcoming challenges,
+                    finding balance, and living a purposeful life. This project delves into those teachings to show how they remain relevant
+                    in today's world.
+                    
+                    At its heart, this project is a celebration of Shakti, the divine feminine energy that sustains and empowers the
+                    universe. It is about inspiring devotion and reverence for this boundless power.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <hindi>॥ ॐ तत् सद्॥</hindi>
+    </div>
+</div>
+
+
+
+{% endblock %}

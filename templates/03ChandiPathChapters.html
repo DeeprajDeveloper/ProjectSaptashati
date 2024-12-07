@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block title %}Chandi Path{% endblock %}
+
+{% block content %}
+
+<div class="nav-pages-buttons">
+    <a href="{{ url_for('index') }}" title="Home">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+                d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+                clip-rule="evenodd" />
+        </svg>
+
+    </a>
+    <div class="gs-title">
+        <img alt="Banner GIF" src="{{ url_for('static', filename='images/gifs/banner.gif') }}" />
+        Step 2: Reading the 3 Charitras (13 chapters)
+        <img alt="Banner GIF" src="{{ url_for('static', filename='images/gifs/banner.gif') }}" />
+    </div>
+    <div>
+        <a href="{{ url_for('initial_purify_verses') }}" title="Initiation & Purification Verses">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M13.729 5.575c1.304-1.074 3.27-.146 3.27 1.544v9.762c0 1.69-1.966 2.618-3.27 1.544l-5.927-4.881a2 2 0 0 1 0-3.088l5.927-4.88Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+        </a>
+        <a href="{{ url_for('concluding_verses') }}" title="Concluding the Chandi Path and Apology Verses">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+<div class="content-container">
+    <!-- <p>
+        The process of reading the three Charitras of the Devi Saptashati involves reciting the 13 chapters in their sequential
+        order, as they represent the divine cosmic roles of the Goddess. 
+        <ul>
+            <li>It begins with the <b>Prathama Charitra (Chapter 1)</b>, where <i>Mahakali destroys Madhu and Kaitabha</i>, symbolizing
+            the removal of ignorance and delusion.</li>
+            <li>
+                The <b>Madhyama Charitra (Chapters 2-4)</b> focuses on <i>Mahalakshmi's battle with Mahishasura</i>, embodying the
+                sustenance and restoration of cosmic harmony.
+            </li>
+            <li>
+                Finally, the <b>Uttama Charitra (Chapters 5-13)</b> narrates the triumph of <i>Mahasaraswati over Shumbha, Nishumbha</i>, and other
+                powerful demons, signifying the victory of wisdom and purity over greed and pride.
+            </li>
+        </ul>
+        
+        Each Charitra should be read with devotion, ideally after the preparatory stotras and mantras, to invoke the blessings of the Divine Mother for spiritual
+        and worldly upliftment.
+    </p> -->
+    <p>
+        To start reading the 3 charitras, follow the order of chapters below. 
+        Click on them to see the shlokas.
+    </p>
+
+    <div class="radio-container">
+        {% for optionName in optionList %}
+            <div class="radio-btn">
+                <input type="radio" name="verse-selection" id="chapter-{{ loop.index }}" value="{{ optionName }}">
+                <label for="chapter-{{ loop.index }}">
+                    <hindi>{{ loop.index }} - {{ optionName }}</hindi>
+                </label>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="verses-main-container" id="verses-container">
+        <div id="hindi-text-container">
+            <div class="verse-title" id="hindi-section">Sanskrit Shloka</div>
+            <!-- Dynamically populated data -->
+        </div>
+        <div id="latin-text-container">
+            <div class="verse-title" id="latin-section">IAST transliteration</div>
+            <!-- Dynamically populated data -->
+        </div>
+        
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+-- database: ../database/deviSaptashatiDB.db
+
+-- SELECT s.ssmid, s.name, s.classification, d.completeVerse, d.verseNo, s.orderId FROM stotraSuktaMantraInfo s
+-- inner join deviSaptashatiOtherVerses d on s.ssmId = d.ssmID
+-- where s.name like '‌अर्गला स्तोत्रम्%';
+
+
+
+insert into deviSaptashatiChapters (ssmID, chapterNo, charitraNo, chapterVerse) 
+values (61,0,0,'॥ देवी माहात्म्यम्‌ ॥ ॥ श्रीदुर्गाय नम: ॥ ॥ अथ श्रीदुर्गासप्तशती ॥');
+

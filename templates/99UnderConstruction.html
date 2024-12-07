@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Under Construction{% endblock %}
+
+{% block content %}
+
+
+<div class="under-construction-container">
+    <div class="text">
+        Thank you for visiting this page. It's currently under construction.
+        <br/> Please visit again.
+        <br/><hindi>॥ धन्यवादः॥</hindi>
+    </div>
+    <div class="image-holder">
+        <img src="{{ url_for('static', filename='/images/UnderConstruction.jpg') }}" alt="" srcset="" title="Vishwakarma Puja | AI Generated">
+    </div>
+    <div class="home-button">
+        <a href="{{ url_for('index') }}">Go Back</a>
+    </div>
+</div>
+
+
+{% endblock %}
