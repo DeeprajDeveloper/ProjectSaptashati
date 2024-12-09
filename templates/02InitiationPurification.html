@@ -46,32 +46,34 @@
         Click on them to see the shlokas.
     </p>
 
-    <div class="radio-container">
-        {% for optionName in optionList %}
+    <div class="info-container">
+        <div class="radio-container">
+            {% for optionName in optionList %}
             <div class="radio-btn">
                 <input type="radio" name="verse-selection" id="verse-{{ loop.index }}" value="{{ optionName }}">
                 <label for="verse-{{ loop.index }}">
                     <hindi>{{ loop.index }} - {{ optionName }}</hindi>
                 </label>
             </div>
-        {% endfor %}
-    </div>
-
-    <div class="verses-main-container" id="verses-container">
-        <div id="hindi-text-container">
-            <div class="verse-title" id="hindi-section">Sanskrit Shloka</div>
-            <!-- Dynamically populated data -->
-        </div>
-        <div id="latin-text-container">
-            <div class="verse-title" id="latin-section">IAST transliteration</div>
-            <!-- Dynamically populated data -->
-        </div>
-        <div id="meaning-text-container">
-            <div class="verse-title" id="latin-section">English Meaning</div>
-            <!-- Dynamically populated data -->
+            {% endfor %}
         </div>
         
+        <div class="verses-main-container" id="verses-container">
+            <div id="hindi-text-container">
+                <div class="verse-title" id="hindi-section">Sanskrit Shloka</div>
+                <!-- Dynamically populated data -->
+            </div>
+            <div id="latin-text-container">
+                <div class="verse-title" id="latin-section">IAST transliteration</div>
+                <!-- Dynamically populated data -->
+            </div>
+            <!-- <div id="meaning-text-container">
+                    <div class="verse-title" id="latin-section">English Meaning</div>
+                </div> -->
+        
+        </div>
     </div>
+
 </div>
 
 
